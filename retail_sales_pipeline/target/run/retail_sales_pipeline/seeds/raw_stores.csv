@@ -1,0 +1,11 @@
+
+    
+    
+    truncate table "dev"."main"."raw_stores";
+    -- dbt seed --
+    
+          COPY "dev"."main"."raw_stores" FROM 'C:\Users\hs250054\Documents\retail_sales_pipeline\seeds\raw_stores.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        
+
+;
+  
