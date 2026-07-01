@@ -1,0 +1,23 @@
+name: 'retail_sales_pipeline'
+version: '1.0.0'
+config-version: 2
+
+profile: 'retail_sales_pipeline'
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+test-paths: ["tests"]
+
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  retail_sales_pipeline:
+    bronze:
+      +materialized: view
+    silver:
+      +materialized: table
+    gold:
+      +materialized: table
