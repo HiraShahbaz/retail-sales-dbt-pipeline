@@ -1,0 +1,40 @@
+version: 2
+
+models:
+  - name: bronze_sales
+    description: "Raw sales transactions from retail source system"
+    columns:
+      - name: sale_id
+        description: "Unique sale identifier"
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        tests:
+          - not_null
+      - name: sale_date
+        tests:
+          - not_null
+      - name: quantity
+        tests:
+          - not_null
+
+  - name: bronze_customers
+    description: "Raw customer data from CRM system"
+    columns:
+      - name: customer_id
+        tests:
+          - unique
+          - not_null
+      - name: email
+        tests:
+          - unique
+          - not_null
+
+  - name: bronze_stores
+    description: "Raw store reference data"
+    columns:
+      - name: store_id
+        tests:
+          - unique
+          - not_null

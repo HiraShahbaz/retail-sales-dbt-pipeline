@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: gold_sales_by_region
+    description: "Monthly sales KPIs aggregated by store region — used for regional performance dashboards"
+    columns:
+      - name: store_region
+        tests:
+          - not_null
+      - name: total_revenue
+        tests:
+          - not_null
+
+  - name: gold_sales_by_category
+    description: "Monthly sales by product category for merchandising reports"
+
+  - name: gold_customer_summary
+    description: "Customer lifetime value and purchase behaviour summary"
+    columns:
+      - name: customer_id
+        tests:
+          - unique
+          - not_null

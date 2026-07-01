@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: silver_sales
+    description: "Cleaned and enriched sales data with customer and store details"
+    columns:
+      - name: sale_id
+        tests:
+          - unique
+          - not_null
+      - name: total_sale_amount
+        tests:
+          - not_null
+      - name: record_status
+        tests:
+          - accepted_values:
+              values: ['VALID', 'INVALID']

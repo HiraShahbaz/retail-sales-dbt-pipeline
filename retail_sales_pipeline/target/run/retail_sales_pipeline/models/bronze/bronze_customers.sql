@@ -1,0 +1,14 @@
+
+  
+  create view "dev"."main"."bronze_customers__dbt_tmp" as (
+    -- Bronze Layer: Raw customer data from source system
+
+select
+    customer_id,
+    first_name,
+    last_name,
+    email,
+    join_date,
+    customer_segment
+from "dev"."main"."raw_customers"
+  );

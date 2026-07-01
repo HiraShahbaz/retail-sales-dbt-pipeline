@@ -1,0 +1,8 @@
+# Inside your retail_sales_pipeline folder:
+
+git init
+git add .
+git commit -m "Initial commit: retail sales dbt pipeline with Bronze/Silver/Gold layers"
+git branch -M main
+git remote add origin https://github.com/HiraShahbaz/retail-sales-dbt-pipeline.git
+git push -u origin main

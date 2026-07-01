@@ -1,0 +1,5 @@
+store_id,store_name,city,region,country,open_date
+S01,Hatfield Central,Hatfield,North,UK,2019-04-01
+S02,London South,London,South,UK,2018-06-15
+S03,Manchester East,Manchester,East,UK,2020-02-20
+S04,Bristol West,Bristol,West,UK,2021-09-10
