@@ -7,4 +7,4 @@ select
     region,
     country,
     open_date
-from "dev"."main"."raw_stores"
+from "neondb"."dbt_hirashahbaz"."raw_stores"

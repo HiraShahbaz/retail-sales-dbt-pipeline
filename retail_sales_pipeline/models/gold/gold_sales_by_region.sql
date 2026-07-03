@@ -8,8 +8,8 @@ select
     count(distinct sale_id)         as total_transactions,
     count(distinct customer_id)     as unique_customers,
     sum(quantity)                   as total_units_sold,
-    round(sum(total_sale_amount), 2) as total_revenue,
-    round(avg(total_sale_amount), 2) as avg_transaction_value
+round(sum(total_sale_amount)::numeric, 2) as total_revenue,
+round(avg(total_sale_amount)::numeric, 2) as avg_transaction_value
 from {{ ref('silver_sales') }}
 where record_status = 'VALID'
 group by store_region, sale_year, sale_month

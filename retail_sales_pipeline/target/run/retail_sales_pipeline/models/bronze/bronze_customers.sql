@@ -1,6 +1,8 @@
 
-  
-  create view "dev"."main"."bronze_customers__dbt_tmp" as (
+  create view "neondb"."dbt_hirashahbaz"."bronze_customers__dbt_tmp"
+    
+    
+  as (
     -- Bronze Layer: Raw customer data from source system
 
 select
@@ -10,5 +12,5 @@ select
     email,
     join_date,
     customer_segment
-from "dev"."main"."raw_customers"
+from "neondb"."dbt_hirashahbaz"."raw_customers"
   );

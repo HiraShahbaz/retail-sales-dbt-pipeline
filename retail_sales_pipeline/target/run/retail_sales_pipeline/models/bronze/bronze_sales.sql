@@ -1,6 +1,8 @@
 
-  
-  create view "dev"."main"."bronze_sales__dbt_tmp" as (
+  create view "neondb"."dbt_hirashahbaz"."bronze_sales__dbt_tmp"
+    
+    
+  as (
     -- Bronze Layer: Raw sales data — no transformation, just expose the seed
 -- This represents data as it arrives from the source system
 
@@ -15,5 +17,5 @@ select
     unit_price,
     store_id,
     store_region
-from "dev"."main"."raw_sales"
+from "neondb"."dbt_hirashahbaz"."raw_sales"
   );

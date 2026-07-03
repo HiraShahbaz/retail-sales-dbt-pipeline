@@ -1,11 +1,14 @@
 
     
     
-    truncate table "dev"."main"."raw_customers";
+    
+    create table "neondb"."dbt_hirashahbaz"."raw_customers" ("customer_id" text,"first_name" text,"last_name" text,"email" text,"join_date" date,"customer_segment" text)
+  ;
     -- dbt seed --
     
-          COPY "dev"."main"."raw_customers" FROM 'C:\Users\hs250054\Documents\retail_sales_pipeline\seeds\raw_customers.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
-        
+          insert into "neondb"."dbt_hirashahbaz"."raw_customers" ("customer_id", "first_name", "last_name", "email", "join_date", "customer_segment") values
+          (%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s)
+      
 
 ;
   

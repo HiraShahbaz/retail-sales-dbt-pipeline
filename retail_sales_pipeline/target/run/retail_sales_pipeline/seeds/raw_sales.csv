@@ -1,11 +1,14 @@
 
     
     
-    truncate table "dev"."main"."raw_sales";
+    
+    create table "neondb"."dbt_hirashahbaz"."raw_sales" ("sale_id" integer,"sale_date" date,"customer_id" text,"product_id" text,"product_name" text,"category" text,"quantity" integer,"unit_price" float8,"store_id" text,"store_region" text)
+  ;
     -- dbt seed --
     
-          COPY "dev"."main"."raw_sales" FROM 'C:\Users\hs250054\Documents\retail_sales_pipeline\seeds\raw_sales.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
-        
+          insert into "neondb"."dbt_hirashahbaz"."raw_sales" ("sale_id", "sale_date", "customer_id", "product_id", "product_name", "category", "quantity", "unit_price", "store_id", "store_region") values
+          (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)
+      
 
 ;
   

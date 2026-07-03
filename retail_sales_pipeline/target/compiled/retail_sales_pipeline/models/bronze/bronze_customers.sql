@@ -7,4 +7,4 @@ select
     email,
     join_date,
     customer_segment
-from "dev"."main"."raw_customers"
+from "neondb"."dbt_hirashahbaz"."raw_customers"

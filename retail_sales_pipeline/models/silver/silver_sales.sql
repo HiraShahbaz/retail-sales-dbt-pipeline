@@ -18,8 +18,8 @@ select
     -- Sale identifiers
     s.sale_id,
     cast(s.sale_date as date)                           as sale_date,
-    extract(year from cast(s.sale_date as date))        as sale_year,
-    extract(month from cast(s.sale_date as date))       as sale_month,
+date_part('year', cast(s.sale_date as date))   as sale_year,
+date_part('month', cast(s.sale_date as date))  as sale_month,
 
     -- Customer info
     s.customer_id,

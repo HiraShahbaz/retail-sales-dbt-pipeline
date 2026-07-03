@@ -1,34 +1,35 @@
 
   
     
-    
 
-    create  table
-      "dev"."main"."silver_sales__dbt_tmp"
+  create  table "neondb"."dbt_hirashahbaz"."silver_sales__dbt_tmp"
   
-    as (
-      -- Silver Layer: Cleaned and enriched sales data
+  
+    as
+  
+  (
+    -- Silver Layer: Cleaned and enriched sales data
 -- Joins sales with customer and store data
 -- Calculates derived fields
 
 with sales as (
-    select * from "dev"."main"."bronze_sales"
+    select * from "neondb"."dbt_hirashahbaz"."bronze_sales"
 ),
 
 customers as (
-    select * from "dev"."main"."bronze_customers"
+    select * from "neondb"."dbt_hirashahbaz"."bronze_customers"
 ),
 
 stores as (
-    select * from "dev"."main"."bronze_stores"
+    select * from "neondb"."dbt_hirashahbaz"."bronze_stores"
 )
 
 select
     -- Sale identifiers
     s.sale_id,
     cast(s.sale_date as date)                           as sale_date,
-    extract(year from cast(s.sale_date as date))        as sale_year,
-    extract(month from cast(s.sale_date as date))       as sale_month,
+date_part('year', cast(s.sale_date as date))   as sale_year,
+date_part('month', cast(s.sale_date as date))  as sale_month,
 
     -- Customer info
     s.customer_id,
@@ -61,6 +62,5 @@ select
 from sales s
 left join customers c on s.customer_id = c.customer_id
 left join stores st   on s.store_id = st.store_id
-    );
-  
+  );
   

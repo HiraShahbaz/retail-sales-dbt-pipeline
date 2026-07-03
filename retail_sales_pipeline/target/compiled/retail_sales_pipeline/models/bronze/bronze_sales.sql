@@ -12,4 +12,4 @@ select
     unit_price,
     store_id,
     store_region
-from "dev"."main"."raw_sales"
+from "neondb"."dbt_hirashahbaz"."raw_sales"

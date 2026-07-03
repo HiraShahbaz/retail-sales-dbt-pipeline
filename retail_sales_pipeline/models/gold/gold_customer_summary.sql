@@ -7,8 +7,8 @@ select
     customer_segment,
     count(distinct sale_id)             as total_orders,
     sum(quantity)                       as total_items_purchased,
-    round(sum(total_sale_amount), 2)    as total_spend,
-    round(avg(total_sale_amount), 2)    as avg_order_value,
+round(sum(total_sale_amount)::numeric, 2)    as total_spend,
+round(avg(total_sale_amount)::numeric, 2)    as avg_order_value,
     min(sale_date)                      as first_purchase_date,
     max(sale_date)                      as last_purchase_date
 from {{ ref('silver_sales') }}

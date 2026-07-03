@@ -1,6 +1,8 @@
 
-  
-  create view "dev"."main"."bronze_stores__dbt_tmp" as (
+  create view "neondb"."dbt_hirashahbaz"."bronze_stores__dbt_tmp"
+    
+    
+  as (
     -- Bronze Layer: Raw store data
 
 select
@@ -10,5 +12,5 @@ select
     region,
     country,
     open_date
-from "dev"."main"."raw_stores"
+from "neondb"."dbt_hirashahbaz"."raw_stores"
   );
