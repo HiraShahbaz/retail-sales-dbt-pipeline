@@ -5,7 +5,7 @@
 
 
 select quantity
-from "dev"."main"."bronze_sales"
+from "neondb"."dbt_hirashahbaz"."bronze_sales"
 where quantity is null
 
 

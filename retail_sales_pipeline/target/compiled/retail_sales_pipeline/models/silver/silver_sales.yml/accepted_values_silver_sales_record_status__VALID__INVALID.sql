@@ -8,7 +8,7 @@ with all_values as (
         record_status as value_field,
         count(*) as n_records
 
-    from "dev"."main"."silver_sales"
+    from "neondb"."dbt_hirashahbaz"."silver_sales"
     group by record_status
 
 )

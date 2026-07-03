@@ -5,7 +5,7 @@
 
 
 select sale_id
-from "dev"."main"."silver_sales"
+from "neondb"."dbt_hirashahbaz"."silver_sales"
 where sale_id is null
 
 

@@ -5,7 +5,7 @@
 
 
 select email
-from "dev"."main"."bronze_customers"
+from "neondb"."dbt_hirashahbaz"."bronze_customers"
 where email is null
 
 
